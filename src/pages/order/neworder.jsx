@@ -72,7 +72,7 @@ export default function Neworder() {
 
     useEffect(() => {
         if (productID != 0) {
-            fetch("http://localhost:1337/products/" + productID,
+            fetch("https://bold-erp.herokuapp.com/products/" + productID,
                 { "method": "GET" })
                 .then((res) => res.json())
                 .then(res => {
@@ -112,7 +112,7 @@ export default function Neworder() {
                 orderToClient: { id: clientID },
                 user: { id: 1 },
             }
-            fetch("http://localhost:1337/orders", {
+            fetch("https://bold-erp.herokuapp.com/orders", {
                 "method": "POST",
                 "headers": {
                     "Content-type": "application/json; charset=UTF-8"
@@ -141,7 +141,7 @@ export default function Neworder() {
                 })
         // Update client balance
         if (status == false) {
-            fetch("http://localhost:1337/clients/" + clientID,
+            fetch("https://bold-erp.herokuapp.com/clients/" + clientID,
                 { "method": "GET" })
                 .then((res) => res.json())
                 .then(res => {
@@ -153,7 +153,7 @@ export default function Neworder() {
             console.log("update user balance")
             console.log((parseInt(balance.balance)) + parseInt(prixTotal))
             console.log("new balance = ", ((parseInt(balance.balance)) + parseInt(prixTotal)) - parseInt(avance))
-            fetch("http://localhost:1337/clients/" + clientID, {
+            fetch("https://bold-erp.herokuapp.com/clients/" + clientID, {
                 "method": "PUT",
                 "headers": {
                     "Content-type": "application/json; charset=UTF-8"
@@ -170,7 +170,7 @@ export default function Neworder() {
         }
 
         if (status == true && avance != 0) {
-            fetch("http://localhost:1337/clients/" + clientID,
+            fetch("https://bold-erp.herokuapp.com/clients/" + clientID,
                 { "method": "GET" })
                 .then((res) => res.json())
                 .then(res => {
@@ -182,7 +182,7 @@ export default function Neworder() {
             console.log("update user balance")
             console.log((parseInt(balance.balance)) + parseInt(prixTotal))
             console.log("new balance = ", ((parseInt(balance.balance)) + parseInt(prixTotal)) - parseInt(avance))
-            fetch("http://localhost:1337/clients/" + clientID, {
+            fetch("https://bold-erp.herokuapp.com/clients/" + clientID, {
                 "method": "PUT",
                 "headers": {
                     "Content-type": "application/json; charset=UTF-8"
@@ -200,7 +200,7 @@ export default function Neworder() {
 
 
         // Update product quantite dispo and vendu (qv = 0)
-            fetch("http://localhost:1337/products/" + productID,
+            fetch("https://bold-erp.herokuapp.com/products/" + productID,
                 { "method": "GET" })
                 .then((res) => res.json())
                 .then(res => {
@@ -208,7 +208,7 @@ export default function Neworder() {
                 }
                 )
             if (typeOrder == "achat") {
-                fetch("http://localhost:1337/products/" + productID, {
+                fetch("https://bold-erp.herokuapp.com/products/" + productID, {
                     "method": "PUT",
                     "headers": {
                         "Content-type": "application/json; charset=UTF-8"
@@ -229,7 +229,7 @@ export default function Neworder() {
                     })
             }
             if (typeOrder == "vent") {
-                fetch("http://localhost:1337/products/" + productID, {
+                fetch("https://bold-erp.herokuapp.com/products/" + productID, {
                     "method": "PUT",
                     "headers": {
                         "Content-type": "application/json; charset=UTF-8"

@@ -28,7 +28,7 @@ export default function OrderProfile() {
             avance
         }
         console.log(payload)
-        const response = await fetch("http://localhost:1337/orders/" + id, {
+        const response = await fetch("https://bold-erp.herokuapp.com/orders/" + id, {
             "method": "PUT",
             "headers": {
                 "Content-type": "application/json; charset=UTF-8"
@@ -61,7 +61,7 @@ export default function OrderProfile() {
 
     useEffect(() => {
         // Get order from server 
-        fetch("http://localhost:1337/orders/" + params.id,
+        fetch("https://bold-erp.herokuapp.com/orders/" + params.id,
             { "method": "GET" })
             .then((res) => res.json())
             .then(res => {

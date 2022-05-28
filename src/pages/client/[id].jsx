@@ -26,7 +26,7 @@ export default function ClientProfile() {
             balance
         }
         console.log(payload)
-        const response = await fetch("http://localhost:1337/clients/"+id, {
+        const response = await fetch("https://bold-erp.herokuapp.com/clients/"+id, {
             "method": "PUT",
             "headers": {
                 "Content-type": "application/json; charset=UTF-8"
@@ -58,7 +58,7 @@ export default function ClientProfile() {
         console.log({ userfromclient: JSON.parse(user) })
 
         // Get client from server 
-        fetch("http://localhost:1337/clients/" + params.id,
+        fetch("https://bold-erp.herokuapp.com/clients/" + params.id,
             { "method": "GET" })
             .then((res) => res.json())
             .then(res => {

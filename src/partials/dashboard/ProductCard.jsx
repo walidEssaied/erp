@@ -7,7 +7,7 @@ function ProductCard({ products }) {
 
 
   const deleteProduct = (id) => {
-    const response = fetch("http://localhost:1337/products/" + id, { "method": "DELETE" })
+    const response = fetch("https://bold-erp.herokuapp.com/products/" + id, { "method": "DELETE" })
       .then(res => {
         if (res.status == 200) {
           res.json

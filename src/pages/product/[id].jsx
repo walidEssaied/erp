@@ -24,7 +24,7 @@ export default function ProductProfile() {
             quantite_vendu_total,
         }
         console.log(payload)
-        const response = await fetch("http://localhost:1337/products/"+id, {
+        const response = await fetch("https://bold-erp.herokuapp.com/products/"+id, {
             "method": "PUT",
             "headers": {
                 "Content-type": "application/json; charset=UTF-8"
@@ -54,7 +54,7 @@ export default function ProductProfile() {
     useEffect(() => {
 
         // Get product from server 
-        fetch("http://localhost:1337/products/" + params.id,
+        fetch("https://bold-erp.herokuapp.com/products/" + params.id,
             { "method": "GET" })
             .then((res) => res.json())
             .then(res => {

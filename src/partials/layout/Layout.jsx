@@ -29,7 +29,7 @@ export default function Layout(props) {
       identifier,
       password
     };
-    let response = await fetch("http://localhost:1337/auth/local", {
+    let response = await fetch("https://bold-erp.herokuapp.com/auth/local", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
