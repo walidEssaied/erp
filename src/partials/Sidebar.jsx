@@ -84,7 +84,7 @@ function Sidebar({
               {/* <svg width="32" height="32" viewBox="0 0 32 32">
               
             </svg> */}
-              <img src="/src/images/bold-icon.svg" className="w-7 h-7" viewBox="0 0 32 32" alt="Bold " />
+              <img src="../images/bold-icon.svg" className="w-7 h-7" viewBox="0 0 32 32" alt="Bold " />
               <span className="text-gray-200 text-lg font-bold hidden md:block uppercase">
                 Bold entreprise
               </span>

@@ -85,7 +85,7 @@ function Notifications() {
                 >
                   <span className="block text-sm mb-2">{alert.title == "Payment" ? "💵" : "❌" } <span className="font-medium text-slate-800">{alert.title}</span>{alert.message}</span>
                 {/* //   : <>
-                //   <img src="/src/images/bold-icon.svg" className="w-5 h-5" viewBox="0 0 32 32" alt="Bold " />
+                //   <img src="../images/bold-icon.svg" className="w-5 h-5" viewBox="0 0 32 32" alt="Bold " />
                 // </> */}
                   <span className="block text-xs font-medium text-slate-400">{alert.created_at}</span>
                 </Link>
