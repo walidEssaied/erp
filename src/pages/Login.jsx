@@ -128,7 +128,7 @@ export default function Login() {
             <div className="grid lg:grid-cols-3">
                 <div className="hidden lg:block col-span-2 h-screen">
                     <figure className="h-screen">
-                        <img src="../images/login_cover.jpg" className="w-full h-full bg-cover" />
+                        <img src="https://raw.githubusercontent.com/walidEssaied/erp/main/src/images/login_cover.jpg" className="w-full h-full bg-cover" />
                     </figure>
                 </div>
                 <div>

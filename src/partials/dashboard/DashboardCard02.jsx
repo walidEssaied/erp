@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LineChart from '../../charts/LineChart01';
-import Icon from '../../images/icon-01.svg';
+import Icon from '../../images/icon-02.svg';
 import EditMenu from '../EditMenu';
 
 // Import utilities
@@ -74,7 +74,7 @@ function DashboardCard02({ vent, vents, achats }) {
             </li>
           </EditMenu> */}
         </header>
-        <h2 className="text-lg font-semibold text-slate-800 mb-2">{t('avchart')}</h2>
+        <h2 className="text-lg font-semibold text-slate-800 mb-2">{t('rvtotal')}</h2>
         {/* <div className="text-xs font-semibold text-slate-400 uppercase mb-1">Sales</div> */}
         <div className="flex items-start">
           <div className="text-3xl font-bold text-slate-800 mr-2"><span className="text-green-500">$</span>{vent/3} </div>
