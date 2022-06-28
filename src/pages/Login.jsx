@@ -72,6 +72,7 @@ export default function Login() {
                     Cookies.set("identifier", identifier);
                     Cookies.set("password", password);
                     Cookies.set("token", JSON.stringify(whoami.jwt))
+                    localStorage.setItem("session-type", "leagal")
                     setUser(JSON.stringify(whoami.user))
                     // console.log(JSON.parse(user).orders)
                     // Cookies.set("orders", JSON.stringify(whoami.user.orders))

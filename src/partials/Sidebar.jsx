@@ -139,7 +139,7 @@ function Sidebar({
                 </NavLink>
               </li>
               {/* Products */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('Products') && 'bg-slate-900'}`}>
+              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('products') && 'bg-slate-900'}`}>
                 <NavLink end to="/products" className={`block text-slate-200 hover:text-white truncate transition duration-150 ${pathname.includes('products') && 'hover:text-slate-200'}`}>
                   <div className="flex items-center">
                     <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
@@ -149,6 +149,128 @@ function Sidebar({
                       <circle className={`fill-current text-slate-400 ${pathname.includes('products') && 'text-indigo-300'}`} cx="5.5" cy="18.5" r="4.5" />
                     </svg>
                     <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">{t('menu-produit')}</span>
+                  </div>
+                </NavLink>
+              </li>
+              {/* Conteneurs */}
+              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('conteneurs') && 'bg-slate-900'}`}>
+                <NavLink end to="/conteneurs" className={`block text-slate-200 hover:text-white truncate transition duration-150 ${pathname.includes('conteneurs') && 'hover:text-slate-200'}`}>
+                  <div className="flex items-center">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style={{enableBackground: 'new 0 0 512 512'}} xmlSpace="preserve" width={"10%"}>
+        <path className={`fill-current text-slate-400 ${pathname.includes('conteneurs') && 'text-indigo-500'}`} d="M478.13,478.555H33.87c-13.072,0-23.67-10.597-23.67-23.67V238.237
+	c0-13.073,10.598-24.067,23.67-24.067h444.26c13.073,0,23.67,10.995,23.67,24.067v216.647
+	C501.801,467.958,491.203,478.555,478.13,478.555z" />
+        <g>
+          <path className={`fill-current text-slate-400 ${pathname.includes('conteneurs') && 'text-indigo-500'}`} style={{fill: '#ffff'}} d="M478.13,203.97h-16.107v-3.259c0-15.747-12.811-28.558-28.558-28.558s-28.558,12.811-28.558,28.558
+		v3.259H107.092v-3.259c0-3.325-0.577-6.516-1.626-9.486l123.892-45.886c7.378,6.524,17.063,10.496,27.663,10.496
+		c12.869,0,24.395-5.847,32.072-15.021l60.754,26.415c1.325,0.575,2.704,0.849,4.061,0.849c3.937,0,7.688-2.294,9.359-6.135
+		c2.246-5.166-0.121-11.174-5.287-13.42l-59.994-26.084c0.558-2.72,0.852-5.536,0.852-8.418c0-19.541-13.473-35.995-31.618-40.559
+		V33.445c0-5.633-4.567-10.199-10.199-10.199c-5.633,0-10.199,4.566-10.199,10.199v48.956c0,5.633,4.566,10.199,10.199,10.199
+		c11.782,0,21.369,9.564,21.414,21.337l-14.288-6.212c-5.165-2.245-11.174,0.122-13.42,5.287c-2.246,5.166,0.121,11.174,5.287,13.42
+		l12.688,5.517c-3.363,2.199-7.371,3.489-11.68,3.489c-11.811,0-21.418-9.608-21.418-21.418c0-5.633-4.566-10.199-10.199-10.199
+		s-10.199,4.566-10.199,10.199c0,4.881,0.849,9.566,2.393,13.924L90.772,174.915c-3.711-1.768-7.861-2.761-12.238-2.761
+		c-15.747,0-28.558,12.811-28.558,28.558v3.259H33.87C15.194,203.97,0,219.342,0,238.236v216.648c0,18.676,15.194,33.87,33.87,33.87
+		h444.261c18.676,0,33.869-15.194,33.869-33.87V238.236C512,219.342,496.806,203.97,478.13,203.97z M425.307,200.712
+		c0-4.499,3.66-8.159,8.159-8.159c4.499,0,8.159,3.659,8.159,8.159v3.259h-16.319V200.712z M70.375,200.712
+		c0-4.499,3.66-8.159,8.159-8.159s8.159,3.659,8.159,8.159v3.259H70.375V200.712z M478.13,224.368
+		c7.302,0,13.471,6.351,13.471,13.868v216.648c0,7.428-6.043,13.471-13.471,13.471H33.87c-7.428,0-13.471-6.043-13.471-13.471
+		V238.236c0-7.518,6.168-13.868,13.471-13.868H478.13z" />
+          <path style={{fill: '#4D3D36'}} d="M93.323,253.238c-5.633,0-10.199,4.566-10.199,10.199v166.247c0,5.633,4.566,10.199,10.199,10.199
+		c5.633,0,10.199-4.566,10.199-10.199V263.437C103.522,257.804,98.956,253.238,93.323,253.238z" />
+          <path style={{fill: '#4D3D36'}} d="M173.896,253.238c-5.633,0-10.199,4.566-10.199,10.199v166.247c0,5.633,4.566,10.199,10.199,10.199
+		c5.633,0,10.199-4.566,10.199-10.199V263.437C184.096,257.804,179.529,253.238,173.896,253.238z" />
+          <path style={{fill: '#4D3D36'}} d="M255.49,253.238c-5.633,0-10.199,4.566-10.199,10.199v166.247c0,5.633,4.566,10.199,10.199,10.199
+		c5.632,0,10.199-4.566,10.199-10.199V263.437C265.689,257.804,261.122,253.238,255.49,253.238z" />
+          <path style={{fill: '#4D3D36'}} d="M337.084,253.238c-5.632,0-10.199,4.566-10.199,10.199v166.247c0,5.633,4.567,10.199,10.199,10.199
+		c5.632,0,10.199-4.566,10.199-10.199V263.437C347.283,257.804,342.716,253.238,337.084,253.238z" />
+          <path style={{fill: '#4D3D36'}} d="M418.677,253.238c-5.632,0-10.199,4.566-10.199,10.199v166.247c0,5.633,4.567,10.199,10.199,10.199
+		c5.632,0,10.199-4.566,10.199-10.199V263.437C428.876,257.804,424.309,253.238,418.677,253.238z" />
+          <path style={{fill: '#4D3D36'}} d="M379.437,179.473l7.068,3.061c1.321,0.572,2.695,0.842,4.048,0.842c3.942,0,7.697-2.3,9.365-6.148
+		c2.238-5.169-0.138-11.174-5.307-13.412l-7.068-3.061c-5.167-2.24-11.172,0.136-13.412,5.306
+		C371.893,171.23,374.268,177.236,379.437,179.473z" />
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+      </svg>
+                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Conteneurs</span>
+                  </div>
+                </NavLink>
+              </li>
+              {/* Chambre froid */}
+              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname.includes('chambre') && 'bg-slate-900'}`}>
+                <NavLink end to="/chambre-froids" className={`block text-slate-200 hover:text-white truncate transition duration-150 ${pathname.includes('chambres') && 'hover:text-slate-200'}`}>
+                  <div className="flex items-center">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style={{enableBackground: 'new 0 0 512 512'}} xmlSpace="preserve" width={"10%"}>
+        <polygon className={`fill-current text-slate-400 ${pathname.includes('chambre') && 'text-indigo-500'}`} points="95.803,0 95.803,461.465 124.109,461.465 124.109,512 387.895,512 387.895,461.465 
+	416.202,461.465 416.202,0 " />
+        <rect x="95.798" className={`fill-current text-slate-400 ${pathname.includes('chambre') && 'text-indigo-500'}`} width="160.193" height="461.469" />
+        <g>
+          <polygon className={`fill-current text-slate-400 ${pathname.includes('chambre') && 'text-indigo-500'}`} points="271.676,461.465 271.676,0 240.329,0 240.329,461.465 124.109,461.465 124.109,512 
+		387.895,512 387.895,461.465 	" />
+          <rect x="294.224" y="67.808" className={`fill-current text-white ${pathname.includes('chambre') && 'text-indigo-100'}`} width="31.347" height="338.787" />
+          <rect x="186.433" y="67.808" className={`fill-current text-white ${pathname.includes('chambre') && 'text-indigo-100'}`} width="31.347" height="338.787" />
+        </g>
+        <rect x="124.105" y="461.469" className={`fill-current text-green ${pathname.includes('chambre') && 'text-indigo-500'}`} width="131.897" height="50.531" />
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+        <g>
+        </g>
+      </svg>
+                    <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Chambre froid</span>
                   </div>
                 </NavLink>
               </li>

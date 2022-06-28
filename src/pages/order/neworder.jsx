@@ -69,16 +69,7 @@ export default function Neworder() {
 
   useEffect(() => {
     setPrixProduct(quantite * parseFloat(productPrix));
-    if (typeContainer == "conteneur_normal") {
-      setContainer(quantite / 2);
-      setPrixcontainer(container * 3.5);
-      setPrixtotal(prixProduct + prixContainer);
-    }
-    if (typeContainer == "lama") {
-      setContainer(quantite);
-      setPrixcontainer(container * 1.5);
-      setPrixtotal(prixProduct + prixContainer);
-    }
+    setPrixtotal(parseFloat(prixContainer)+ parseFloat(prixProduct))
   }, [productPrix, typeContainer, quantite, prixContainer, prixProduct]);
 
   useEffect(() => {
@@ -341,7 +332,7 @@ export default function Neworder() {
           </select>
         </label>
         <label className="text-md font-semibold mt-3">
-          {t("container")}
+            Nombre des conteneurs
           <input
             type="number"
             value={parseInt(container)}
@@ -349,7 +340,37 @@ export default function Neworder() {
             className="block p-2 rounded pl-5 my-1"
           />
         </label>
+        {/* <label className="text-md font-semibold mt-5">
+          Prix du conteneur(s)
+          <input
+            type="number"
+            onChange={(e) => setPrixcontainer(e.target.value)}
+            className="block p-2 rounded my-1"
+          />
+        </label> */}
 
+        <label className="text-md font-semibold mt-3">
+            Prix produit
+          <input
+            type="number"
+            onChange={(e) => setPrixProduct(e.target.value)}
+            value={parseFloat(prixProduct)}
+            className="block p-2 rounded pl-5 my-1"
+          />
+          {/* <span className="ml-5 text-xs font-inter">
+            {t("prix_total_calculer")} {parseInt(prixTotal)}
+          </span> */}
+        </label>
+        
+        <label className="text-md font-semibold mt-5">
+        {t("prix_total")}
+          <input
+            type="number"
+            onChange={(e) => setPrixtotal(e.target.value)}
+            value={parseFloat(prixTotal)}
+            className="block p-2 rounded my-1"
+          />
+        </label>
         <label className="text-md font-semibold my-3">
           {t("qstpayement")}
           <input
@@ -367,37 +388,8 @@ export default function Neworder() {
             className="block p-2 rounded pl-5 my-1"
           />
         </label>
-        <label className="text-md font-semibold mt-3">
-            Prix produit
-          <input
-            type="number"
-            onChange={(e) => setPrixProduct(e.target.value)}
-            value={parseFloat(prixProduct)}
-            className="block p-2 rounded pl-5 my-1"
-          />
-          {/* <span className="ml-5 text-xs font-inter">
-            {t("prix_total_calculer")} {parseInt(prixTotal)}
-          </span> */}
-        </label>
-        <label className="text-md font-semibold mt-5">
-          Prix du conteneur(s)
-          <input
-            type="number"
-            onChange={(e) => setPrixcontainer(e.target.value)}
-            value={parseFloat(prixContainer)}
-            className="block p-2 rounded my-1"
-          />
-        </label>
-        <label className="text-md font-semibold mt-5">
-        {t("prix_total")}
-          <input
-            type="number"
-            onChange={(e) => setPrixtotal(e.target.value)}
-            value={parseFloat(prixTotal)}
-            className="block p-2 rounded my-1"
-          />
-        </label>
       </section>
+      
       <button
         className="p-2 bg-blue-500 rounded text-white font-semibold"
         onClick={() => {

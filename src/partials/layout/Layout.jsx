@@ -14,6 +14,8 @@ export default function Layout(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [user, setUser] = useState()
+  const [sessiontype, setSessiontype] = useState("leagal");
+
   // const [token, setToken] = useState(Cookies.get("token"))
 
   const [loading, setLoading] = useState(true)
@@ -113,6 +115,19 @@ export default function Layout(props) {
 
   }
 
+  const changeSession = () => {
+    // if (localStorage) {
+    //   if (JSON.stringify(localStorage.getItem("session-type")) == "leagal") {
+    //     localStorage.setItem("session-type", "illeagal");
+    //   }
+    // }
+    if(sessiontype == "leagal") {
+        setSessiontype("illeagal")
+    } else {
+        setSessiontype("leagal")
+    }
+  };
+
   useEffect(() => {
     if (Cookies.get("identifier") && Cookies.get("password")) {
       const id = Cookies.get("identifier")
@@ -145,6 +160,17 @@ export default function Layout(props) {
 
             <main>
               <div className={`px-4 sm:px-6 lg:px-8 py-8  max-w-7xl mx-auto ${i18n.language == "ar" ? "w-4/5 ml-10" : ""}`}>
+              <div className={`${sessiontype == "leagal" ? "bg-green-500" : "bg-gray-700"} p-2  text-white rounded mb-1 text-center`}>
+        <h3 className="mb-1">Your are logged in {sessiontype} session</h3>
+        <button
+          className="text-xs p-1 bg-blue-500 rounded"
+          onClick={() => {
+            changeSession();
+          }}
+        >
+          Change session type
+        </button>
+      </div>  
               {props.children}
               </div>
             </main>
