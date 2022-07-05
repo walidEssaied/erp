@@ -90,7 +90,6 @@ function ClientCard({ clients }) {
                           {t('voir')}
                         </Link>
                       </button>
-                      <button className="mr-3 bg-red-500 px-2 text-white rounded" onClick={() => { deleteClient(client.id) }}>{t('supprimer')}</button>
                     </div>
                   </td>
                 </tr>

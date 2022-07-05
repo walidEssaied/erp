@@ -27,8 +27,8 @@ function ChambreFroids() {
             <div className="sm:flex sm:justify-between sm:items-center mb-8">
                 <div></div>
                 <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
-                    <Link to="/client/newclient">
-                        <button className="p-2 rounded bg-green-500 text-white font-semibold text-sm">{t('addclient')}</button>
+                    <Link to="/order/neworder">
+                        <button className="p-2 rounded bg-green-500 text-white font-semibold text-sm">Ajouter ordre</button>
                     </Link>
                     <Datepicker />
                 </div>

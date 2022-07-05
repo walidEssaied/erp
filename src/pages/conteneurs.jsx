@@ -28,7 +28,7 @@ function Conteneurs() {
                 <div></div>
                 <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
                     <Link to="/client/newclient">
-                        <button className="p-2 rounded bg-green-500 text-white font-semibold text-sm">{t('addclient')}</button>
+                        <button className="p-2 rounded bg-green-500 text-white font-semibold text-sm">Ajouter conteneurs</button>
                     </Link>
                     <Datepicker />
                 </div>

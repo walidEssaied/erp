@@ -69,8 +69,19 @@ export default function Neworder() {
 
   useEffect(() => {
     setPrixProduct(quantite * parseFloat(productPrix));
-    setPrixtotal(parseFloat(prixContainer)+ parseFloat(prixProduct))
-  }, [productPrix, typeContainer, quantite, prixContainer, prixProduct]);
+    setPrixtotal(
+      parseFloat(prixContainer) + parseFloat(prixProduct) + parseFloat(avance)
+    );
+    console.log(parseFloat(avance));
+    console.log(parseFloat(prixTotal));
+  }, [
+    productPrix,
+    typeContainer,
+    quantite,
+    prixContainer,
+    prixProduct,
+    avance,
+  ]);
 
   useEffect(() => {
     if (productID != 0) {
@@ -298,8 +309,11 @@ export default function Neworder() {
             className="p-2 rounded w-min pr-10 my-1"
           >
             <option value="vente">{t("choisir_type_order")}</option>
-            <option value="vente">Vente</option>
-            <option value="achat">Achat</option>
+            <option value="vente">Achat</option>
+            <option value="achat">Vente</option>
+            <option value="achat">Achat produit chambre froide</option>
+            <option value="achat">Vente produit chambre froide</option>
+            <option value="achat">Location chambre froide</option>
           </select>
         </section>
       </section>
@@ -332,7 +346,7 @@ export default function Neworder() {
           </select>
         </label>
         <label className="text-md font-semibold mt-3">
-            Nombre des conteneurs
+          Nombre des conteneurs
           <input
             type="number"
             value={parseInt(container)}
@@ -350,37 +364,19 @@ export default function Neworder() {
         </label> */}
 
         <label className="text-md font-semibold mt-3">
-            Prix produit
+          Prix produit
           <input
             type="number"
             onChange={(e) => setPrixProduct(e.target.value)}
-            value={parseFloat(prixProduct)}
+            defaultValue={parseFloat(prixProduct)}
             className="block p-2 rounded pl-5 my-1"
           />
+          <span className="text-xs">Prix produit {prixProduct}</span>
           {/* <span className="ml-5 text-xs font-inter">
             {t("prix_total_calculer")} {parseInt(prixTotal)}
           </span> */}
         </label>
-        
         <label className="text-md font-semibold mt-5">
-        {t("prix_total")}
-          <input
-            type="number"
-            onChange={(e) => setPrixtotal(e.target.value)}
-            value={parseFloat(prixTotal)}
-            className="block p-2 rounded my-1"
-          />
-        </label>
-        <label className="text-md font-semibold my-3">
-          {t("qstpayement")}
-          <input
-            type="checkbox"
-            defaultChecked={status}
-            onClick={(e) => setStatus(!status)}
-            className="rounded ml-3"
-          />
-        </label>
-        <label className="text-md font-semibold">
           {t("qstavance")}
           <input
             type="number"
@@ -388,8 +384,18 @@ export default function Neworder() {
             className="block p-2 rounded pl-5 my-1"
           />
         </label>
+        <label className="text-md font-semibold mt-5">
+          {t("prix_total")}
+          <input
+            type="number"
+            onChange={(e) => setPrixtotal(e.target.value)}
+            value={parseFloat(prixTotal)}
+            className="block p-2 rounded my-1"
+          />
+          <span className="text-xs">Prix Total {prixProduct}</span>
+        </label>
       </section>
-      
+
       <button
         className="p-2 bg-blue-500 rounded text-white font-semibold"
         onClick={() => {

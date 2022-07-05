@@ -60,6 +60,16 @@ export default function Newclient() {
         <div className="p-5">
             <h1 className="text-3xl">{t('addclient')}</h1>
             <form className="flex flex-col gap-5 ml-5 py-5" onSubmit={(e) => onSubmitHandler(e)}>
+            {/* buyer / seller / habat / faleh */}
+            <label>
+                <p>Type de client</p>
+                <select className='rounded p-1 border pr-10 w-1/5'>
+                    <option>buyer</option>
+                    <option>seller</option>
+                    <option>habat</option>
+                    <option>faleh</option>
+                </select>
+            </label>
                 <label>
                     <p>
                         {t('nom')} {t('client')}

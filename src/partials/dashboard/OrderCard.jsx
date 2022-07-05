@@ -51,9 +51,9 @@ function OrderCard({ orders }) {
                 <th className="p-2">
                   <div className="font-semibold text-center">{t('container')}</div>
                 </th>
-                <th className="p-2">
+                {/* <th className="p-2">
                   <div className="font-semibold text-center">{t('avance')}</div>
-                </th>
+                </th> */}
                 <th className="p-2">
                   <div className="font-semibold text-center">{t('status')}</div>
                 </th>
@@ -86,9 +86,9 @@ function OrderCard({ orders }) {
                   <td className="p-2">
                     <div className="text-center">{order?.container}</div>
                   </td>
-                  <td className="p-2">
+                  {/* <td className="p-2">
                     <div className="text-center">DINAR {order?.avance}</div>
-                  </td>
+                  </td> */}
                   <td className="p-2">
                     <td className="p-2">{order.status ? <>Payée</> : <>Non payée</>}</td>
                   </td>
