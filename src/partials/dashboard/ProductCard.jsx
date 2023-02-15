@@ -6,7 +6,7 @@ function ProductCard({ products }) {
   const [t, i18n] = useTranslation();
 
   const deleteProduct = (id) => {
-    const response = fetch("https://bold-erp.herokuapp.com/products/" + id, {
+    const response = fetch("http://92.222.181.90:1337/products/" + id, {
       method: "DELETE",
     })
       .then((res) => {

@@ -27,7 +27,7 @@ export default function ClientProfile() {
     };
     console.log(payload);
     const response = await fetch(
-      "https://bold-erp.herokuapp.com/clients/" + id,
+      "http://92.222.181.90:1337/clients/" + id,
       {
         method: "PUT",
         headers: {
@@ -60,7 +60,7 @@ export default function ClientProfile() {
     console.log({ userfromclient: JSON.parse(user) });
 
     // Get client from server
-    fetch("https://bold-erp.herokuapp.com/clients/" + params.id, {
+    fetch("http://92.222.181.90:1337/clients/" + params.id, {
       method: "GET",
     })
       .then((res) => res.json())

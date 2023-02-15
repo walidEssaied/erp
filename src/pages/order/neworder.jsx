@@ -85,7 +85,7 @@ export default function Neworder() {
 
   useEffect(() => {
     if (productID != 0) {
-      fetch("https://bold-erp.herokuapp.com/products/" + productID, {
+      fetch("http://92.222.181.90:1337/products/" + productID, {
         method: "GET",
       })
         .then((res) => res.json())
@@ -119,7 +119,7 @@ export default function Neworder() {
       orderToClient: { id: clientID },
       user: { id: 1 },
     };
-    fetch("https://bold-erp.herokuapp.com/orders", {
+    fetch("http://92.222.181.90:1337/orders", {
       method: "POST",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -146,7 +146,7 @@ export default function Neworder() {
     });
     // Update client balance
     if (status == false) {
-      fetch("https://bold-erp.herokuapp.com/clients/" + clientID, {
+      fetch("http://92.222.181.90:1337/clients/" + clientID, {
         method: "GET",
       })
         .then((res) => res.json())
@@ -161,7 +161,7 @@ export default function Neworder() {
         "new balance = ",
         parseInt(balance.balance) + parseInt(prixTotal) - parseInt(avance)
       );
-      fetch("https://bold-erp.herokuapp.com/clients/" + clientID, {
+      fetch("http://92.222.181.90:1337/clients/" + clientID, {
         method: "PUT",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -181,7 +181,7 @@ export default function Neworder() {
     }
 
     if (status == true && avance != 0) {
-      fetch("https://bold-erp.herokuapp.com/clients/" + clientID, {
+      fetch("http://92.222.181.90:1337/clients/" + clientID, {
         method: "GET",
       })
         .then((res) => res.json())
@@ -196,7 +196,7 @@ export default function Neworder() {
         "new balance = ",
         parseInt(balance.balance) + parseInt(prixTotal) - parseInt(avance)
       );
-      fetch("https://bold-erp.herokuapp.com/clients/" + clientID, {
+      fetch("http://92.222.181.90:1337/clients/" + clientID, {
         method: "PUT",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -216,7 +216,7 @@ export default function Neworder() {
     }
 
     // Update product quantite dispo and vendu (qv = 0)
-    fetch("https://bold-erp.herokuapp.com/products/" + productID, {
+    fetch("http://92.222.181.90:1337/products/" + productID, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -224,7 +224,7 @@ export default function Neworder() {
         setProduct(res);
       });
     if (typeOrder == "achat") {
-      fetch("https://bold-erp.herokuapp.com/products/" + productID, {
+      fetch("http://92.222.181.90:1337/products/" + productID, {
         method: "PUT",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -245,7 +245,7 @@ export default function Neworder() {
         });
     }
     if (typeOrder == "vente") {
-      fetch("https://bold-erp.herokuapp.com/products/" + productID, {
+      fetch("http://92.222.181.90:1337/products/" + productID, {
         method: "PUT",
         headers: {
           "Content-type": "application/json; charset=UTF-8",

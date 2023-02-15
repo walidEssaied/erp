@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ChambreCard({ clients }) {
   const deleteClient = (id) => {
-    const response = fetch("https://bold-erp.herokuapp.com/clients/" + id, {
+    const response = fetch("http://92.222.181.90:1337/clients/" + id, {
       method: "DELETE",
     })
       .then((res) => {

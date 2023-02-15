@@ -23,7 +23,7 @@ export default function Login() {
             identifier,
             password
         };
-        let response = await fetch("https://bold-erp.herokuapp.com/auth/local", {
+        let response = await fetch("http://92.222.181.90:1337/auth/local", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -26,7 +26,7 @@ export default function ConteneurProfile() {
             balance
         }
         console.log(payload)
-        const response = await fetch("https://bold-erp.herokuapp.com/clients/"+id, {
+        const response = await fetch("http://92.222.181.90:1337/clients/"+id, {
             "method": "PUT",
             "headers": {
                 "Content-type": "application/json; charset=UTF-8"
@@ -58,7 +58,7 @@ export default function ConteneurProfile() {
         console.log({ userfromclient: JSON.parse(user) })
 
         // Get client from server 
-        fetch("https://bold-erp.herokuapp.com/clients/" + params.id,
+        fetch("http://92.222.181.90:1337/clients/" + params.id,
             { "method": "GET" })
             .then((res) => res.json())
             .then(res => {

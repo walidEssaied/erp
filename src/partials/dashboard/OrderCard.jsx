@@ -12,7 +12,7 @@ function OrderCard({ orders }) {
   }, [])
 
   const deleteOrder = (id) => {
-    const response = fetch("https://bold-erp.herokuapp.com/orders/" + id, { "method": "DELETE" })
+    const response = fetch("http://92.222.181.90:1337/orders/" + id, { "method": "DELETE" })
       .then(res => {
         if (res.status == 200) {
           res.json

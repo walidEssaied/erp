@@ -28,7 +28,7 @@ export default function OrderProfile() {
     };
     console.log(payload);
     const response = await fetch(
-      "https://bold-erp.herokuapp.com/orders/" + id,
+      "http://92.222.181.90:1337/orders/" + id,
       {
         method: "PUT",
         headers: {
@@ -62,7 +62,7 @@ export default function OrderProfile() {
 
   useEffect(() => {
     // Get order from server
-    fetch("https://bold-erp.herokuapp.com/orders/" + params.id, {
+    fetch("http://92.222.181.90:1337/orders/" + params.id, {
       method: "GET",
     })
       .then((res) => res.json())
