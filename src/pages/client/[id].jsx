@@ -27,7 +27,7 @@ export default function ClientProfile() {
     };
     console.log(payload);
     const response = await fetch(
-      "http://92.222.181.90:1337/clients/" + id,
+      "https://erp-server-production.up.railway.app/clients/" + id,
       {
         method: "PUT",
         headers: {
@@ -60,7 +60,7 @@ export default function ClientProfile() {
     console.log({ userfromclient: JSON.parse(user) });
 
     // Get client from server
-    fetch("http://92.222.181.90:1337/clients/" + params.id, {
+    fetch("https://erp-server-production.up.railway.app/clients/" + params.id, {
       method: "GET",
     })
       .then((res) => res.json())

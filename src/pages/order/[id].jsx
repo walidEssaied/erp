@@ -28,7 +28,7 @@ export default function OrderProfile() {
     };
     console.log(payload);
     const response = await fetch(
-      "http://92.222.181.90:1337/orders/" + id,
+      "https://erp-server-production.up.railway.app/orders/" + id,
       {
         method: "PUT",
         headers: {
@@ -62,7 +62,7 @@ export default function OrderProfile() {
 
   useEffect(() => {
     // Get order from server
-    fetch("http://92.222.181.90:1337/orders/" + params.id, {
+    fetch("https://erp-server-production.up.railway.app/orders/" + params.id, {
       method: "GET",
     })
       .then((res) => res.json())

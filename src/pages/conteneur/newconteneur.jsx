@@ -27,7 +27,7 @@ export default function Newconteneur() {
             user: 1
         }
         console.log(user, JSON.stringify(user.id))
-        const response = await fetch("http://92.222.181.90:1337/clients", {
+        const response = await fetch("https://erp-server-production.up.railway.app/clients", {
             "method": "POST",
             "headers": {
                 "Content-type": "application/json; charset=UTF-8"

@@ -21,7 +21,7 @@ export default function NewProduct() {
             quantite_vendu_total,
             user: 1
         }
-        const response = await fetch("http://92.222.181.90:1337/products", {
+        const response = await fetch("https://erp-server-production.up.railway.app/products", {
             "method": "POST",
             "headers": {
                 "Content-type": "application/json; charset=UTF-8"

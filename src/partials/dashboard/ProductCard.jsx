@@ -6,7 +6,7 @@ function ProductCard({ products }) {
   const [t, i18n] = useTranslation();
 
   const deleteProduct = (id) => {
-    const response = fetch("http://92.222.181.90:1337/products/" + id, {
+    const response = fetch("https://erp-server-production.up.railway.app/products/" + id, {
       method: "DELETE",
     })
       .then((res) => {
